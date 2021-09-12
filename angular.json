@@ -120,5 +120,9 @@
       }
     }
   },
-  "defaultProject": "adminpro"
+  "defaultProject": "adminpro",
+  "cli": {
+    "analytics": false,
+    "packageManager": "yarn"
+  }
 }
