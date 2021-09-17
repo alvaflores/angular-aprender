@@ -1,1 +1,65 @@
-<p>progress works!</p>
+<div class="row">
+  <!-- column -->
+  <div class="col-md-12">
+    <div class="card">
+      <div class="card-body">
+        <h4 class="card-title">Default Progress bars <a class="get-code" data-toggle="collapse" href="#pgr1"
+                                                        aria-expanded="true"><i class="fa fa-code" title="Get Code"
+                                                                                data-toggle="tooltip"></i></a></h4>
+        <div class="collapse m-t-15" id="pgr1">
+          <pre class="line-numbers language-javascript"><code>&lt;div class="progress"&gt;<br/>&lt;div class="progress-bar bg-danger " role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width:50%; height:6px;"&gt; &lt;span class="sr-only"&gt;50% Complete&lt;/span&gt;&lt;/div&gt;<br/>&lt;/div&gt;</code></pre>
+        </div>
+        <div class="progress m-t-30">
+          <div class="progress-bar bg-danger active"
+               style="height:6px;"
+               [style.width] = "getProgreso"
+               role="progressbar">
+          </div>
+        </div>
+
+        <div class="progress m-t-30">
+          <div class="progress-bar bg-success active"
+               style="height:6px;"
+               [style.width] = "getProgreso2"
+               role="progressbar">
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-6">
+    <div class="card">
+      <div class="card-body">
+        <div class="col-sm-12 col-xs-12">
+          <form class="input-form">
+            <div class="row">
+              <div class="col-lg-12">
+
+                <!--<app-incrementador (valorSalida)="cambioValorHijo($event)" [progreso]="15" ></app-incrementador>-->
+                <app-incrementador (valorSalida)="progreso1 = $event" [progreso]="progreso1" ></app-incrementador>
+
+              </div>
+            </div>
+            <!-- form-group -->
+          </form>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <div class="col-6">
+    <div class="card">
+      <div class="card-body">
+        <app-incrementador (valorSalida)="progreso2 = $event"
+                           [progreso]="progreso2"
+                           btnClass="btn-success"
+        ></app-incrementador>
+      </div>
+    </div>
+  </div>
+</div>
