@@ -9,7 +9,8 @@ import {PagesComponent} from '../pages.component';
 import { FormsModule } from '@angular/forms';
 import {ComponentsModule} from '../components/components.module';
 
-
+import { ChartsModule } from 'ng2-charts';
+//import { ChartsModule } from 'ng2-charts/ng2-charts';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import {ComponentsModule} from '../components/components.module';
     FormsModule,
     SharedModule,
     AppRoutingModule,
-    ComponentsModule
+    ComponentsModule,
+    ChartsModule
   ],
 })
 export class PagesModule { }
